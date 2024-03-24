@@ -1,0 +1,6 @@
+@SquaresAPIHomework_HostAddress = http://localhost:5150
+
+GET {{SquaresAPIHomework_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

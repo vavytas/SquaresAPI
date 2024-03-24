@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquaresAPIHomework", "SquaresAPIHomework\SquaresAPIHomework.csproj", "{0003DCBA-EE05-4653-863E-F08175ABBEA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0003DCBA-EE05-4653-863E-F08175ABBEA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0003DCBA-EE05-4653-863E-F08175ABBEA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0003DCBA-EE05-4653-863E-F08175ABBEA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0003DCBA-EE05-4653-863E-F08175ABBEA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C72F7247-A0D3-43A5-8D7E-7BB0F7F06DB5}
+	EndGlobalSection
+EndGlobal

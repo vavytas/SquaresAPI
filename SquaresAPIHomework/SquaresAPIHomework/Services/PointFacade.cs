@@ -17,6 +17,7 @@ namespace SquaresAPIHomework.Services
             return _pointRepository.Get();
         }
 
+        // Get all points that make a square
         public async Task<List<List<OnePoint>>> GetSquares()
         {
             var points = await _pointRepository.Get();
@@ -45,6 +46,7 @@ namespace SquaresAPIHomework.Services
             return squares;
         }
 
+        // Recursively add unique piont conbinations
         void GenerateCombinations(List<OnePoint> numbers, int start, List<OnePoint> currentCombination, List<List<OnePoint>> uniqueCombinations, HashSet<OnePoint> visited)
         {
             if (currentCombination.Count == 4)
@@ -68,19 +70,21 @@ namespace SquaresAPIHomework.Services
             }
         }
 
+        // Find distance between two pionts
         private double DistanceSquared(OnePoint p1, OnePoint p2)
         {
 
             return (p1.XProp - p2.XProp) * (p1.XProp - p2.XProp) + (p1.YProp - p2.YProp) * (p1.YProp - p2.YProp);
         }
 
+        // Check if four points make a squeare
         public bool CheckIfSquare(OnePoint p1, OnePoint p2, OnePoint p3, OnePoint p4)
         {
             double d2 = DistanceSquared(p1, p2); // distance between p1 and p2
             double d3 = DistanceSquared(p1, p3); // distance between p1 and p3
             double d4 = DistanceSquared(p1, p4); // distance between p1 and p4
 
-            // If lengths of diagonals are not same, then it's not a square
+            // If lengths of diagonals are not same it is not a square
             if (d2 == 0 || d3 == 0 || d4 == 0)
             {
                 return false;
@@ -121,15 +125,19 @@ namespace SquaresAPIHomework.Services
             return point;
         }
 
+        // Add point object to database 
         public async Task<List<OnePoint>> Post(int xvalue, int yvalue)
         {
             return await _pointRepository.Post(xvalue, yvalue);
         }
+
+        // Add a list of point objects to database
         public async Task<List<OnePoint>> PostArray(List<OnePoint> points)
         {
             return await _pointRepository.PostArray(points);
         }
 
+        // Update a pionts value
         public async Task<OnePoint> Put(int id, int xvalue, int yvalue)
         {
             var point = await _pointRepository.Get(id);
@@ -147,6 +155,8 @@ namespace SquaresAPIHomework.Services
             return point;
         }
 
+
+        // Delete a point object from database
         public async Task<OnePoint> Delete(int id)
         {
             var point = await _pointRepository.Get(id);
@@ -159,6 +169,7 @@ namespace SquaresAPIHomework.Services
             return await _pointRepository.Delete(point);
         }
 
+        // Delete all point objects from database
         public async Task<List<OnePoint>> DeleteAll()
         {
             return await _pointRepository.DeleteAll();

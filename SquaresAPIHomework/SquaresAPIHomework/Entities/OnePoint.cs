@@ -27,5 +27,11 @@ namespace SquaresAPIHomework.Entities
         {
         }
 
+        // Find the distance between two points
+        public double FindDistance(OnePoint pointB)
+        {
+            return Math.Sqrt(Math.Pow(XProp - pointB.XProp, 2) + Math.Pow(YProp - pointB.YProp, 2));
+        }
+
     }
 }

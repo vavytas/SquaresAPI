@@ -11,13 +11,10 @@ namespace SquaresAPIHomework.Controllers
     [ApiController]
     public class PointsController : ControllerBase
     {
-        private readonly DataContext _dataContext;
         private readonly IPointFacade _pointFacade;
 
-
-        public PointsController(DataContext dataContext, IPointFacade pointFacade)
+        public PointsController(IPointFacade pointFacade)
         {
-            _dataContext = dataContext;
             _pointFacade = pointFacade;
         }
 
